@@ -1,7 +1,7 @@
-FROM alpine:3.22.4 AS tools
+FROM alpine:3.24.3 AS tools
 RUN apk add --no-cache wget
 
-FROM cloudflare/cloudflared:2026.3.0
+FROM cloudflare/cloudflared:2026.10.2
 
 # Copy utilities
 COPY --from=tools /usr/bin/wget /usr/bin/wget
